@@ -1,8 +1,10 @@
-<p>Book was successfully created.</p>
+<p>投稿一覧</p>
 
 <% @book.each do |book| %>
 
  <p>Title</p>
- <span><%= book.title %></span>
+ <span>
+  <%= link_to book.title, book_path(book.id) %>
+ </span>
 
 <% end %>
